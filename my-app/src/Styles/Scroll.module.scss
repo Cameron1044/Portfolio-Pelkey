@@ -1,0 +1,50 @@
+@use './styles.scss';
+
+body {
+  z-index: 1;
+  background-color: styles.$tertiaryColor;
+
+  .h1-scroll {
+    font-weight: 900;
+    font-size: clamp(1rem, 9vw, 10rem);
+    color: styles.$mainColor;
+    &.initial {
+      transform-origin: 56.365% center;
+    }
+    &.secondary {
+      transform-origin: center center;
+      font-weight: 400;
+      font-size: clamp(1rem, 1vw, 10rem);
+    }
+
+  }
+
+  .fade-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &.fullScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: styles.$tertiaryColor;
+      // transform: scale(1);
+    }
+  }
+
+  .text-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,110 @@
+@use '../../Styles/styles.scss';
+
+
+.footer-padding {
+  padding: 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: styles.$mainColor;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.footer-links-div {
+  width: 9rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: styles.$textColor;
+}
+
+a {
+  color: styles.$textColor;
+  text-decoration: none;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-media p svg {
+  margin-right: 0.2rem;
+}
+
+.footer-links-div h4 {
+  font-size: 0.85rem;
+  line-height: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+
+.footer-links-div p {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin: 0.5rem 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.footer-links-div a {
+  cursor: default;
+}
+
+.footer-links-div p:hover {
+  cursor: pointer;
+}
+
+.footer-below {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+
+.footer-below-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-below-links a {
+  font-size: 13px;
+  line-height: 15px;
+  margin-left: 2rem;
+  color: white;
+  font-weight: 600;
+}
+
+hr {
+  color: white;
+  width: 100%;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  line-height: 15x;
+  color: styles.$textColor;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 832px) {
+
+  .footer-links-div {
+    width: 38%;
+  }
+}
