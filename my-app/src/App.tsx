@@ -10,7 +10,7 @@ import Navbar from './Components/Navigation/Navbar';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
         <Route path="/about" element={<About />} />
