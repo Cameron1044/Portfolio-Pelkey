@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../Styles/Navbar.module.scss'
 import { FaTimes, FaBars } from 'react-icons/fa';
-import Logo from '../../Images/logo.svg';
+import Logo from '../../Images/ME.png';
 
 const Navbar = () => {
   const navRef = useRef<HTMLElement>(null);

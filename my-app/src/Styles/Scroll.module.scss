@@ -4,17 +4,101 @@ body {
   z-index: 1;
   background-color: styles.$tertiaryColor;
 
+  .h2-project {
+    font-size: 2rem;
+    color: styles.$mainColor;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .h3-project {
+    font-size: 1rem;
+    color: styles.$mainColor;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  .div-card {
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    &.img {
+      display: flex;
+      flex: 5;
+      margin-top: 0.25rem;
+      margin-right: 0.25rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.title {
+      display: flex;
+      flex: 1;
+      margin-bottom: 0.25rem;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.25rem;
+    }
+
+    &.objective {
+      display: flex;
+      flex: 1;
+      margin-bottom: 0.25rem;
+      margin-left: 0.25rem;
+      flex-direction: column;
+    }
+
+    &.results {
+      display: flex;
+      flex: 1;
+      margin-top: 0.25rem;
+      margin-left: 0.25rem;
+      flex-direction: column;
+    }
+  }
+
+  .div-project {
+    width: 80%;
+    height: 60%;
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div-project-left {
+    display: flex;
+    flex-direction: column;
+    // background-color: blue;
+    flex: 2;
+  }
+
+  .div-project-right {
+    display: flex;
+    flex-direction: column;
+    // background-color: green;
+    flex: 3;
+  }
+
+  .img-project {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .h1-scroll {
     font-weight: 900;
     font-size: clamp(1rem, 9vw, 10rem);
     color: styles.$mainColor;
     &.initial {
-      transform-origin: 56.365% center;
+      transform-origin: 43.16% center;
     }
     &.secondary {
       transform-origin: center center;
-      font-weight: 400;
-      font-size: clamp(1rem, 1vw, 10rem);
+      font-weight: 800;
+      font-size: clamp(1rem, 3vw, 10rem);
     }
 
   }
