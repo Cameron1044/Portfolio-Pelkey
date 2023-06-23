@@ -17,6 +17,7 @@ const Navbar = () => {
       <nav ref={navRef}>
         <ul>
           <li onClick={showNavbar}><Link to="/">Home</Link></li>
+          <li onClick={showNavbar}><Link to="/projects">Projects</Link></li>
           <li onClick={showNavbar}><Link to="/about">About</Link></li>
           {/* More links as needed */}
         </ul>
