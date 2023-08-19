@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../Styles/Scroll.module.scss';
 import { throttle } from 'lodash';
 import { easeCubic } from 'd3-ease';
-import Project1 from '../../Images/Project1.png';
+// import Project1 from '../../Images/Project1.png';
 import IMG1 from '../../Images/IMG1.png';
 
 function ScrollComponent() {
