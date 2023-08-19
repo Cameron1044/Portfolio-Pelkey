@@ -1,12 +1,13 @@
 @use './styles.scss';
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 20px;
   justify-content: space-around;
+  align-items: start;
 
   .projectCard {
-    width: 300px;
     margin: 20px;
     background-color: red;
     border-radius: 10px;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../../Styles/Projects.module.scss';
+import IMG1 from '../../Images/Project1.png';
 
 // Define your project data and its type
 interface Project {
@@ -13,13 +14,37 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Project 1',
-    image: '../../Images/Project1.png',
+    image: IMG1,
     description: 'This is project 1.'
   },
   {
     id: 2,
     title: 'Project 2',
-    image: '../../Images/Project1.png',
+    image: IMG1,
+    description: 'This is project 2.'
+  },
+  {
+    id: 3,
+    title: 'Project 2',
+    image: IMG1,
+    description: 'This is project 2.'
+  },
+  {
+    id: 4,
+    title: 'Project 2',
+    image: IMG1,
+    description: 'This is project 2.'
+  },
+  {
+    id: 5,
+    title: 'Project 2',
+    image: IMG1,
+    description: 'This is project 2.'
+  },
+  {
+    id: 6,
+    title: 'Project 2',
+    image: IMG1,
     description: 'This is project 2.'
   },
   // more projects here...
@@ -37,15 +62,15 @@ function Projects() {
   }
 
   return (
-    <div className={styles['projects']}>
+    <div className={styles.projects}>
       {projects.map(project => (
-        <div key={project.id} className={styles['projectCard']} onClick={() => openProject(project)}>
+        <div key={project.id} className={styles.projectCard} onClick={() => openProject(project)}>
           <img src={project.image} alt={project.title} />
           <h2>{project.title}</h2>
         </div>
       ))}
       {selectedProject && (
-        <div className={styles['projectModal']}>
+        <div className={styles.projectModal}>
           <button onClick={closeProject}>Close</button>
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
