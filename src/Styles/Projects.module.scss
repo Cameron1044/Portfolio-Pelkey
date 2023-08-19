@@ -3,39 +3,200 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-gap: 20px;
+  grid-gap: 0;
   justify-content: space-around;
   align-items: start;
 
   .projectCard {
-    margin: 20px;
-    background-color: red;
+    margin: 3%;
+    background-color: styles.$cardColor;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     cursor: pointer;
 
+    .imgContainer {
+      height: 30rem;
+      position: relative;
+    }
+
+    h2 {
+      padding-bottom: 2%;
+      // background-color: aqua;
+      font-size: x-large;
+    }
+
+    video {
+      position: absolute;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain; // Makes the image maintain its aspect ratio while fitting within the container
+      object-position: center; // Center the image within the container 
+    }
+
     img {
-      width: 100%;
+      position: absolute;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain; // Makes the image maintain its aspect ratio while fitting within the container
+      object-position: center; // Center the image within the container
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); // Translucent black
+    z-index: 99; // Below the modal but above everything else
+    animation: FadeIn 0.15s forwards;
+
+    &.FadeOut {
+      animation: FadeOut 0.15s forwards; // Animation to bubble out
+    }
+
+    @keyframes FadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 
   .projectModal {
+    display: flex;  // Make this a flex container
+    flex-direction: column;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: blue;
+    width: 70%;       // Width of the modal
+    height: 70%;      // Height of the modal
+    transform: translate(-50%, -50%) scale(0.8); // Start slightly smaller for the animation
+    background-color: styles.$cardColor;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     z-index: 100;
+    opacity: 0; // Start invisible for the animation
+    animation: bubbleIn 0.15s forwards; // Animation to bubble in
 
+    h2 {
+      padding-bottom: 2%;
+      background-color: blue;
+      font-size: x-large;
+    }
+
+    .contentContainer {
+      display: flex;  // Make this a flex container
+      flex: 1;
+      flex-direction: row;  // This is the default value for flex-direction so it's optional
+      background-color: red;
+
+      p {
+        padding: 1%
+      }
+
+      .gallery {
+        background-color: aquamarine;
+        width: 50%;
+        position: relative;
+    
+        img {
+          position: absolute;
+          max-height: 100%;
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          object-fit: contain; // Makes the image maintain its aspect ratio while fitting within the container
+          object-position: center; // Center the image within the container
+        }
+
+        video {
+          position: absolute;
+          max-height: 100%;
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          object-fit: contain; // Makes the image maintain its aspect ratio while fitting within the container
+          object-position: center; // Center the image within the container
+        }
+    
+        button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          &.prev {
+            left: 0;
+          }
+          &.next {
+            right: 0;
+          }
+        }
+      }
+    }
+  
     button {
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
+    }
+  
+    // Bubble in animation
+    @keyframes bubbleIn {
+      0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+  
+    &.bubbleOut {
+      animation: bubbleOut 0.15s forwards; // Animation to bubble out
+    }
+  
+    // Bubble out animation
+    @keyframes bubbleOut {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
     }
   }
 }
