@@ -1,64 +1,60 @@
 [
   {
     "id": 1,
-    "title": "Project 1",
+    "title": "Constellation Simulation",
     "media": [
       {
         "type": "video",
-        "src": "Projects/video.mp4"
-      },
-      {
-        "type": "image",
-        "src": "Projects/phteven.png"
-      },
-      {
-        "type": "image",
-        "src": "Projects/Project1.png"
+        "src": "Projects/Bennu/bennu1.mp4"
       }
     ],
     "description": "This is project 1."
   },
   {
     "id": 2,
-    "title": "Project 1",
+    "title": "Python Chess Engine",
     "media": [
       {
-        "type": "image",
-        "src": "Projects/phteven.png"
-      },
-      {
-        "type": "image",
-        "src": "Projects/Project1.png"
+        "type": "video",
+        "src": "Projects/Chess/chess1.mp4"
       }
     ],
     "description": "This is project 1."
   },
   {
     "id": 3,
-    "title": "Project 1",
+    "title": "3D Printed Glider",
     "media": [
       {
         "type": "image",
-        "src": "Projects/phteven.png"
+        "src": "Projects/Glider/glider1.jpg"
       },
       {
         "type": "image",
-        "src": "Projects/Project1.png"
+        "src": "Projects/Glider/glider2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Glider/glider3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Glider/glider4.jpg"
       }
     ],
-    "description": "This is project 1."
+    "description": "In our 'Aerospace Vehicle Design and Performance' class, we were asked to design a glider using the aerodynamic equations we learned. While foam board was the recommended material, I pitched the idea of using my 3D printer. We started by making a MATLAB script that used our class equations to figure out the best design for the glider. I then used SOLIDWORKS to make the CAD design, and 3D printed everything except the wing. We couldn't use regular PLA because it was too heavy. So, after some trial and error, we went with a lightweight foaming PLA which worked out really well in our tests. Despite the tight deadlines, we kept tweaking our design until it was just right. Our final glider did great, especially when it came to handling unexpected gusts and staying stable."
   },
   {
     "id": 4,
-    "title": "Project 1",
+    "title": "Auto-tracker Gimbal",
     "media": [
       {
         "type": "image",
-        "src": "Projects/phteven.png"
+        "src": "Projects/Phteven/phteven1.jpg"
       },
       {
-        "type": "image",
-        "src": "Projects/Project1.png"
+        "type": "video",
+        "src": "Projects/Phteven/phteven2.mp4"
       }
     ],
     "description": "This is project 1."

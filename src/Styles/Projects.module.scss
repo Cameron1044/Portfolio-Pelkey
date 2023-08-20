@@ -11,13 +11,14 @@
     margin: 3%;
     background-color: styles.$cardColor;
     border-radius: 10px;
+    padding-top: 56.25%;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     cursor: pointer;
 
     .imgContainer {
-      height: 30rem;
       position: relative;
+      padding-top: 90%;
     }
 
     h2 {
@@ -105,7 +106,7 @@
 
     h2 {
       padding-bottom: 2%;
-      background-color: blue;
+      // background-color: blue;
       font-size: x-large;
     }
 
@@ -113,14 +114,15 @@
       display: flex;  // Make this a flex container
       flex: 1;
       flex-direction: row;  // This is the default value for flex-direction so it's optional
-      background-color: red;
+      // background-color: red;
 
       p {
+        width: 50%;
         padding: 1%
       }
 
       .gallery {
-        background-color: aquamarine;
+        // background-color: aquamarine;
         width: 50%;
         position: relative;
     
