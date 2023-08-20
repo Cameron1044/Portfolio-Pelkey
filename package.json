@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,6 +15,7 @@
     "@types/node": "^16.18.36",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
+    "classnames": "^2.3.2",
     "d3-ease": "^3.0.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",

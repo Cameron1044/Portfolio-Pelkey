@@ -8,7 +8,7 @@
         "src": "Projects/Bennu/bennu1.mp4"
       }
     ],
-    "description": "This is project 1."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
         "src": "Projects/Chess/chess1.mp4"
       }
     ],
-    "description": "This is project 1."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     "id": 3,
@@ -46,6 +46,17 @@
   },
   {
     "id": 4,
+    "title": "Hybrid Rocket Engine",
+    "media": [
+      {
+        "type": "video",
+        "src": "Projects/Hybrid/hybrid1.mp4"
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "id": 5,
     "title": "Auto-tracker Gimbal",
     "media": [
       {
@@ -57,21 +68,17 @@
         "src": "Projects/Phteven/phteven2.mp4"
       }
     ],
-    "description": "This is project 1."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
-    "id": 5,
-    "title": "Project 1",
+    "id": 6,
+    "title": "8Bit Computer",
     "media": [
       {
         "type": "image",
-        "src": "Projects/phteven.png"
-      },
-      {
-        "type": "image",
-        "src": "Projects/Project1.png"
+        "src": "Projects/8Bit/8bit1.jpg"
       }
     ],
-    "description": "This is project 1."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 ]
