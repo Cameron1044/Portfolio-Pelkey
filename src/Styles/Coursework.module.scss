@@ -1,0 +1,33 @@
+@use './styles.scss';
+
+.container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .courseworkContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .pContainer {
+      width: 60%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+h1 {
+  font-weight: 800;
+}
+
+p {
+  font-weight: 400;
+  padding: 5px 15%;
+}

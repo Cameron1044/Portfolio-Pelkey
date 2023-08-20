@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "title": "Calculus 1 for Engineers",
+    "code": "APPM 1350"
+  },
+  {
+    "id": 2,
+    "title": "Intro to Rocket Engineering",
+    "code": "ASEN 1403"
+  },
+  {
+    "id": 3,
+    "title": "Engineering, Ethics, Society",
+    "code": "ENES 1010"
+  },
+  {
+    "id": 4,
+    "title": "General Physics 1",
+    "code": "PHYS 1110"
+  },
+  {
+    "id": 5,
+    "title": "Calculus 2 for Engineers",
+    "code": "APPM 1360"
+  },
+  {
+    "id": 6,
+    "title": "Materials Sci Aerospace",
+    "code": "ASEN 1022"
+  },
+  {
+    "id": 7,
+    "title": "Aerospace Computing",
+    "code": "ASEN 1320"
+  },
+  {
+    "id": 8,
+    "title": "General Physics 2",
+    "code": "PHYS 1120"
+  },
+  {
+    "id": 9,
+    "title": "Calculus 3 for Engineers",
+    "code": "APPM 2350"
+  },
+  {
+    "id": 10,
+    "title": "Stat, Structures & Matls",
+    "code": "ASEN 2001"
+  },
+  {
+    "id": 11,
+    "title": "Thermo & Aerodynamics",
+    "code": "ASEN 2002"
+  },
+  {
+    "id": 12,
+    "title": "Experimntl/Comp Methds in ASEN",
+    "code": "ASEN 2012"
+  },
+  {
+    "id": 13,
+    "title": "Intro Diff Eq W/Lin Alg",
+    "code": "APPM 2360"
+  },
+  {
+    "id": 14,
+    "title": "Dynamics & Systems",
+    "code": "ASEN 2003"
+  },
+  {
+    "id": 15,
+    "title": "Veh Design & Performance",
+    "code": "ASEN 2004"
+  },
+  {
+    "id": 16,
+    "title": "Intro to Humans in Aviation",
+    "code": "ASEN 3046"
+  },
+  {
+    "id": 17,
+    "title": "Aerodynamics",
+    "code": "ASEN 3111"
+  },
+  {
+    "id": 18,
+    "title": "Structures",
+    "code": "ASEN 3112"
+  },
+  {
+    "id": 19,
+    "title": "Aircraft Dynamics",
+    "code": "ASEN 3128"
+  },
+  {
+    "id": 20,
+    "title": "Discrete Structures",
+    "code": "CSCI 2824"
+  },
+  {
+    "id": 21,
+    "title": "Intro Human Spaceflight",
+    "code": "ASEN 3036"
+  },
+  {
+    "id": 22,
+    "title": "Thermo & Heat Transfer",
+    "code": "ASEN 3113"
+  },
+  {
+    "id": 23,
+    "title": "Orb Mech/Att Dyn & Cntl",
+    "code": "ASEN 3200"
+  },
+  {
+    "id": 24,
+    "title": "Electronic and Communication",
+    "code": "ASEN 3300"
+  },
+  {
+    "id": 25,
+    "title": "Comp Sci 2: Data Struct",
+    "code": "CSCI 2270"
+  }
+]

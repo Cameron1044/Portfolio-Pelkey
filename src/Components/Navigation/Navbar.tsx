@@ -1,23 +1,39 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../Styles/Navbar.module.scss'
+import styles from '../../Styles/Navbar.module.scss';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import Logo from '../../Images/ME.png';
 
 const Navbar = () => {
   const navRef = useRef<HTMLElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const showNavbar = () => {
     navRef.current?.classList.toggle(styles['responsive-nav']);
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust this value as needed
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header>
-      <img src={Logo} alt="Logo" />
+    <header className={isScrolled ? styles.shrunkenNavbar : ''}>
+      <Link to="/">  {/* Added this Link component */}
+        <img src={Logo} alt="Logo"></img>
+      </Link>  {/* Close the Link component */}
       <nav ref={navRef}>
         <ul>
-          <li onClick={showNavbar}><Link to="/">Home</Link></li>
           <li onClick={showNavbar}><Link to="/projects">Projects</Link></li>
+          <li onClick={showNavbar}><Link to="/coursework">Coursework</Link></li>
           <li onClick={showNavbar}><Link to="/about">About</Link></li>
           {/* More links as needed */}
         </ul>

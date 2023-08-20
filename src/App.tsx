@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import Home from './Components/Pages/Home';
 import About from './Components/Pages/About';
 import Projects from './Components/Pages/Projects';
+import Coursework from './Components/Pages/Coursework';
 import Navbar from './Components/Navigation/Navbar';
 
 function App() {
@@ -16,8 +16,9 @@ function App() {
       <div style={{marginTop: '10rem'}}>
         <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/coursework" element={<Coursework />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Projects />} />
         </Routes>
       </div>
     </Router>

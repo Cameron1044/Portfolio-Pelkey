@@ -1,13 +1,25 @@
 @use './styles.scss';
 
 /* Navbar.css */
+:root {
+  --navbar-height: 10rem;
+}
 
 header {
+  height: var(--navbar-height);
+  transition: height 0.225s ease, padding 0.225s ease; // Add transition for padding
+  
+  padding-left: 1rem; // Example padding value; adjust as needed
+
+  &.shrunkenNavbar {
+    --navbar-height: 7rem; 
+    padding-left: 2.2rem; // Adjust the padding value for shrunken state
+  }
+
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10rem;
   padding: 0 2rem;
   background-color: styles.$mainColor;
   box-shadow: 0 6px 10px rgba(0,0,0,0.2);
@@ -18,11 +30,11 @@ header {
   top: 0;
 
   img {
-    height: 9rem;
-    width: 9rem;
-    border-radius: 9rem;
+    height: calc(var(--navbar-height) * 0.9); 
+    width: auto; 
+    border-radius: 50%; 
+    transition: height 0.225s ease; // Add transition for image
   }
-
   .nav-btn {
     padding: 0.35rem;
     font-size: 2rem;
@@ -63,7 +75,7 @@ nav {
     align-items: center;
     height: 100%;
     margin: 0 2rem; 
-    color: styles.$textColor;
+    color: styles.$cardColor;
     text-decoration: none;
     border-bottom: 0.2rem solid transparent;
 

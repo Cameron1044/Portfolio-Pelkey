@@ -1,11 +1,18 @@
 @use './styles.scss';
 
+body {
+  z-index: 1;
+  background-color: styles.$tertiaryColor;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   grid-gap: 0;
   justify-content: space-around;
   align-items: start;
+  margin-right: 1%;
+  margin-left: 1%;
 
   .projectCard {
     margin: 3%;
@@ -24,7 +31,9 @@
     h2 {
       padding-bottom: 2%;
       // background-color: aqua;
-      font-size: x-large;
+      font-size: calc(10px + 1vw);
+      font-weight: 800;
+      color: styles.$mainColor;
     }
 
     video {
