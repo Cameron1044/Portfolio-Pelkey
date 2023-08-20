@@ -211,3 +211,34 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  
+    .projectModal {
+      flex-direction: column;
+      width: 92%;       // Width of the modal
+      height: 80%;      // Height of the modal
+  
+      .contentContainer {
+        display: flex;  // Make this a flex container
+        flex: 1;
+        flex-direction: column;  // This is the default value for flex-direction so it's optional
+        // background-color: red;
+  
+        p {
+          width: 100%;
+          flex: 1;
+          // background-color: aqua;
+        }
+  
+        .gallery {
+          flex: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
