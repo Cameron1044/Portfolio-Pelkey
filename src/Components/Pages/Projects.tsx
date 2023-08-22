@@ -24,7 +24,6 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-
   useEffect(() => {
     setProjects(projectData as Project[]);
   }, []);
