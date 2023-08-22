@@ -1,18 +1,26 @@
 [
   {
     "id": 1,
-    "title": "ASEN 2004"
+    "title": "Thermo & Heat Transfer",
+    "code": "ASEN 3113",
+    "category": "Aerospace"
   },
   {
     "id": 2,
-    "title": "ASEN 20"
+    "title": "Thermo & Heat Transfer",
+    "code": "ASEN 3113",
+    "category": "Aerospace"
   },
   {
     "id": 3,
-    "title": "ASEN 2002"
+    "title": "Thermo & Heat Transfer",
+    "code": "ASEN 3113",
+    "category": "Aerospace"
   },
   {
     "id": 4,
-    "title": "ASEN 2004"
+    "title": "Thermo & Heat Transfer",
+    "code": "ASEN 3113",
+    "category": "Aerospace"
   }
 ]

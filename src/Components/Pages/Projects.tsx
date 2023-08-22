@@ -74,6 +74,24 @@ function Projects() {
     };
   }, [selectedProject, closeProject]);
 
+  const renderPagination = (selectedProject: Project) => {
+    if (selectedProject.media.length > 1) {
+      return (
+        <div className={styles.projects_modal_gallery_button_container}>
+          <button className={classNames(styles.projects_modal_gallery_button, styles.prev)} onClick={prevImage}>
+            <FaChevronLeft className={styles.projects_modal_gallery_button_icon}/>
+          </button>
+          {selectedProject.media.map((_, index) => (
+            <div key={index} className={`${styles.projects_modal_gallery_button_pagination} ${currentImageIndex === index ? styles.active : ''}`}/>
+          ))}
+          <button className={classNames(styles.projects_modal_gallery_button, styles.next)} onClick={nextImage}>
+            <FaChevronRight className={styles.projects_modal_gallery_button_icon}/>
+          </button>
+        </div>
+      );
+    }
+  }
+  
   return (
     <body>
       <div className={styles.projects}>
@@ -105,18 +123,7 @@ function Projects() {
                     ) : (
                       <video className={styles.projects_modal_gallery_media} src={selectedProject.media[currentImageIndex].src} autoPlay loop muted playsInline/>
                     )}
-                  
-                  <div className={styles.projects_modal_gallery_button_container}>
-                    <button className={classNames(styles.projects_modal_gallery_button, styles.prev)} onClick={prevImage}>
-                      <FaChevronLeft className={styles.projects_modal_gallery_button_icon}/>
-                    </button>
-                    {selectedProject.media.map((_, index) => (
-                      <div key={index} className={`${styles.projects_modal_gallery_button_pagination} ${currentImageIndex === index ? styles.active : ''}`}/>
-                    ))}
-                    <button className={classNames(styles.projects_modal_gallery_button, styles.next)} onClick={nextImage}>
-                      <FaChevronRight className={styles.projects_modal_gallery_button_icon}/>
-                    </button>
-                    </div>
+                    {renderPagination(selectedProject)}
                   </div>
                 </div>
                 <div className={styles.projects_modal_content_text_container}>

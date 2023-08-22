@@ -15,10 +15,9 @@ function App() {
       <Navbar />
       <div style={{marginTop: '10rem'}}>
         <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route path="/coursework" element={<Coursework />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/" element={<Projects />} />
         </Routes>
       </div>
     </Router>
