@@ -1,11 +1,20 @@
 import React from 'react';
+import styles from '../../Styles/About.module.scss';
+import Logo from '../../Images/ME.png';
 
 function About() {
   return (
-    <div>
-      <h1>About</h1>
-      <p>This is the About page.</p>
-    </div>
+    <body>
+      <div className={styles.content}>
+        <div className={styles.content_img_border}>
+          <img className={styles.content_img} src={Logo} alt="Logo"></img>
+        </div>
+        <h3 className={styles.content_h3}>Hi, my name is</h3>
+        <h1 className={styles.content_h1}>Cameron Pelkey</h1>
+        <h2 className={styles.content_h2}>Aspiring Aerospace Engineer</h2>
+        <p className={styles.content_p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </body>
   );
 }
   

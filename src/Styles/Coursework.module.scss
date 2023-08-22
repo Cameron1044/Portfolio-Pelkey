@@ -36,7 +36,7 @@ body {
   display: flex;
   font-weight: 900;
   font-size: 3rem;
-  color: styles.$mainColor;
+  color: styles.$textColor;
   align-items: center;
   justify-content: center;
 }
@@ -52,13 +52,20 @@ body {
   padding-top: 56.25%;
   padding: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  opacity: 1;
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .coursework_card_icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: styles.$secondaryColor;
+  background-color: styles.$iconColorBackground;
   margin-right: 0.5rem;
   border-radius: 3rem;
   height: 3rem;
@@ -68,7 +75,7 @@ body {
 
   .icon {
     font-size: 1.5rem;
-    color: styles.$mainColor;
+    color: styles.$iconColor
   }
 }
 
@@ -87,7 +94,7 @@ body {
   // background-color: yellow;
   font-weight: 600;
   font-size: 20px;
-  color: styles.$mainColor;
+  color: styles.$textColor2;
 }
 
 .coursework_card_content_h2 {
@@ -98,7 +105,7 @@ body {
   justify-content: center;
   font-weight: 200;
   font-size: 16px;
-  color: styles.$mainColor;
+  color: styles.$textColor2;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -194,12 +201,12 @@ body {
   }
 
   .coursework_h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .coursework_card {
-    min-width: 8rem;
-    height: 2rem;
+    min-width: 10rem;
+    height: 2.5rem;
     border-radius: 5px;
     padding: 0.25rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
@@ -208,18 +215,18 @@ body {
   .coursework_card_icon {
     margin-right: 0.25rem;
     border-radius: 1.5rem;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     min-width: 1.5rem;
     min-height: 1.5rem;
   
     .icon {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
   }
   
   .coursework_card_content_h1 {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .coursework_card_content_h2 {

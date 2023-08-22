@@ -1,15 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-// $mainColor: #282727;
-$mainColor: #464555;
+// $mainColor: #464555;
+// $mainColorLight: #5767aa;
+// $secondaryColor: #F17A7C;
+// $cardColor: #dcdcdc;
+// $innerCardColor: #ccc;
+// $tertiaryColor: #ABA9BC;
+// $textColor: #D8E9E8;
+
+$mainColor: #0F172A;
 $mainColorLight: #5767aa;
-$secondaryColor: #F17A7C;
+$secondaryColor: #70FACB;
 $cardColor: #dcdcdc;
 $innerCardColor: #ccc;
-// $tertiaryColor: #FFE788;
-$tertiaryColor: #ABA9BC;
-$textColor: #D8E9E8;
+$tertiaryColor: #0F172A;
+$textColor: #dcdcdc;
+$textColor2: #0F172A;
+$textColor3: #5767aa;
+
+$navTextColor: #dcdcdc;
+
+$iconColor: #0F172A;
+$iconColorBackground: #5767aa;
+
 
 * {
   padding: 0;

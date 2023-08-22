@@ -3,6 +3,7 @@
 /* Navbar.css */
 :root {
   --navbar-height: 10rem;
+  --navbar-height--mobile: 8rem;
 }
 
 header {
@@ -51,6 +52,8 @@ header {
 nav {
   display: flex;
   height: 100%;
+  width: 100%;
+  justify-content: center;
 
   ul {
     display: flex;
@@ -75,7 +78,7 @@ nav {
     align-items: center;
     height: 100%;
     margin: 0 2rem; 
-    color: styles.$cardColor;
+    color: styles.$navTextColor;
     text-decoration: none;
     border-bottom: 0.2rem solid transparent;
 
@@ -89,6 +92,14 @@ nav {
 @media only screen and (max-width: 768px) {
 
   header {
+    height: var(--navbar-height--mobile);
+    transition: height 0.225s ease, padding 0.225s ease; // Add transition for padding
+  
+    &.shrunkenNavbar {
+      --navbar-height--mobile: 6rem; 
+      padding-left: 2.2rem; // Adjust the padding value for shrunken state
+    }
+
     .nav-btn {
       display: flex;
       opacity: 1;
