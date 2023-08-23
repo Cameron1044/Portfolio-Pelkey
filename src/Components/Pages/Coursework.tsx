@@ -37,41 +37,41 @@ function Coursework() {
   }, []);
 
   return (
-    <body>
-      <div className={styles.coursework_container}>
-        <h1 className={styles.coursework_h1}>Completed Coursework</h1>
-        <div className={styles.coursework_grid}>
-          {coursesC.map(course => (
-            <div className={styles.coursework_card}>
-              <div className={styles.coursework_card_icon}>
-                {IconMap[course.category]}
-              </div>
-              <div className={styles.coursework_card_content}>
-                <h1 className={styles.coursework_card_content_h1} key={course.id}>{course.code}</h1>
-                <h2 className={styles.coursework_card_content_h2} key={course.id}>{course.title}</h2>
-              </div>
+    <>
+    <div className={styles.coursework_container}>
+      <h1 className={styles.coursework_h1}>Completed Coursework</h1>
+      <div className={styles.coursework_grid}>
+        {coursesC.map(course => (
+          <div className={styles.coursework_card} key={course.id}>
+            <div className={styles.coursework_card_icon}>
+              {IconMap[course.category]}
             </div>
-          ))}
-        </div>
-        <div className={styles.coursework_divider}/>
-      </div>
-      <div className={styles.coursework_container}>
-        <h1 className={styles.coursework_h1}>In Progress Coursework</h1>
-        <div className={styles.coursework_grid}>
-          {coursesP.map(course => (
-            <div className={styles.coursework_card}>
-              <div className={styles.coursework_card_icon}>
-                {IconMap[course.category]}
-              </div>
-              <div className={styles.coursework_card_content}>
-                <h1 className={styles.coursework_card_content_h1} key={course.id}>{course.code}</h1>
-                <h2 className={styles.coursework_card_content_h2} key={course.id}>{course.title}</h2>
-              </div>
+            <div className={styles.coursework_card_content}>
+              <h1 className={styles.coursework_card_content_h1}>{course.code}</h1>
+              <h2 className={styles.coursework_card_content_h2}>{course.title}</h2>
+            </div>
           </div>
-          ))}
-        </div>
+        ))}
       </div>
-    </body>
+      <div className={styles.coursework_divider}/>
+    </div>
+    <div className={styles.coursework_container}>
+      <h1 className={styles.coursework_h1}>In-Progress Coursework</h1>
+      <div className={styles.coursework_grid}>
+        {coursesP.map(course => (
+          <div className={styles.coursework_card} key={course.id}>
+            <div className={styles.coursework_card_icon}>
+              {IconMap[course.category]}
+            </div>
+            <div className={styles.coursework_card_content}>
+              <h1 className={styles.coursework_card_content_h1}>{course.code}</h1>
+              <h2 className={styles.coursework_card_content_h2}>{course.title}</h2>
+            </div>
+        </div>
+        ))}
+      </div>
+    </div>
+    </>
   );
 }
   

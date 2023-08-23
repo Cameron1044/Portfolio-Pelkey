@@ -12,6 +12,10 @@ const Navbar = () => {
     navRef.current?.classList.toggle(styles['responsive-nav']);
   }
 
+  const closeNavbar = () => {
+    navRef.current?.classList.remove(styles['responsive-nav']);
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) { // Adjust this value as needed
@@ -27,14 +31,12 @@ const Navbar = () => {
 
   return (
     <header className={isScrolled ? styles.shrunkenNavbar : ''}>
-      {/* <Link to="/">
-        <img src={Logo} alt="Logo"></img>
-      </Link> */}
+      {/* ... */}
       <nav ref={navRef}>
         <ul>
-          <li onClick={showNavbar}><Link to="/">About</Link></li>
-          <li onClick={showNavbar}><Link to="/projects">Projects</Link></li>
-          <li onClick={showNavbar}><Link to="/coursework">Coursework</Link></li>
+          <li onClick={closeNavbar}><Link to="/">About</Link></li>
+          <li onClick={closeNavbar}><Link to="/projects">Projects</Link></li>
+          <li onClick={closeNavbar}><Link to="/coursework">Coursework</Link></li>
           {/* More links as needed */}
         </ul>
         <button className={`${styles['nav-btn']} ${styles['nav-close-btn']}`} onClick={showNavbar}>

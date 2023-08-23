@@ -20,7 +20,7 @@ body {
   background-color: styles.$cardColor;
   border-radius: 10px;
   padding-top: 56.25%;
-  padding: 20px;
+  padding: 6%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   cursor: pointer;
   opacity: 1;
@@ -32,9 +32,12 @@ body {
 }
 
 .projects_card_h2 {
+  overflow: hidden;
   padding-bottom: 2%;
   // background-color: aqua;
-  font-size: calc(10px + 1vw);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  height: calc(1.2 * 2 * 1.5rem);
   font-weight: 800;
   color: styles.$textColor2;
 }
@@ -287,7 +290,7 @@ body {
 
 .projects_modal_gallery_button_icon {
   position: relative;
-  color: styles.$tertiaryColor;
+  color: styles.$paginationColor;
   align-self: center;
   font-size: large;
 }
@@ -296,7 +299,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;  // Makes it a circle
-  background-color: styles.$tertiaryColor; // Some default color
+  background-color: styles.$paginationColor; // Some default color
   margin: 0 5px; // Space them out a bit
   transition: background-color 0.3s; // Smooth transition
 
@@ -341,12 +344,23 @@ body {
   .projects_modal {
     width: 90%;       // Width of the modal
   }
+  .projects_card_h2 {
+    font-size: 1rem;
+    line-height: 1.2;
+    height: calc(1.2 * 2 * 1rem);
+  }
 }
 
 @media only screen and (max-width: 768px) {
 
 .projects {
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.projects_card_h2 {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  height: calc(1.2 * 2 * 0.75rem);
 }
   
 .projects_modal {
