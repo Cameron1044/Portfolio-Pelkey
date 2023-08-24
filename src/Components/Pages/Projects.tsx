@@ -15,38 +15,52 @@ interface Project {
   id: number;
   title: string;
   media: Media[];
-  description: string;
+  objective: string;
+  results: string;
 }
+const isWebMSupported = () => {
+  const video = document.createElement('video');
+  return !!video.canPlayType('video/webm; codecs="vp8, vorbis"');
+}  
+
+const VideoPlayer = React.memo(({ source, className }: { source: string, className?: string }) => {
+  const supportsWebM = isWebMSupported();  
+
+  return (
+    <video className={className} autoPlay loop muted playsInline preload="auto">
+      {supportsWebM ? <source src={source.replace('.ext','.webm')} type="video/webm" /> : <source src={source.replace('.ext','.mp4')} type="video/mp4" />}
+      Not Supported
+    </video>
+  );
+});
 
 function Projects() {
   const [closing, setClosing] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const isWebMSupported = () => {
-    const video = document.createElement('video');
-    return !!video.canPlayType('video/webm; codecs="vp8, vorbis"');
-  }  
 
   useEffect(() => {
     setProjects(projectData as Project[]);
   }, []);
 
-  function nextImage() {
+  const nextImage = useCallback(() => {
     console.log("Next image triggered");
     if (selectedProject && currentImageIndex < selectedProject.media.length - 1) {
       setCurrentImageIndex(currentImageIndex + 1);
+    } else {
+      setCurrentImageIndex(0);
     }
-    console.log(currentImageIndex)
-  }
+  }, [currentImageIndex, selectedProject]);
   
-  function prevImage() {
+  const prevImage = useCallback(() => {
     console.log("Prev image triggered");
     if (currentImageIndex > 0) {
       setCurrentImageIndex(currentImageIndex - 1);
+    } else {
+      setCurrentImageIndex(selectedProject!.media.length - 1);
     }
-    console.log(currentImageIndex)
-  }
+  }, [currentImageIndex, selectedProject]);
 
   function startCloseProject() {
     setClosing(true);
@@ -77,17 +91,6 @@ function Projects() {
     };
   }, [selectedProject, closeProject]);
 
-  function VideoPlayer({ source, className }: { source: string, className?: string }) {
-    const supportsWebM = isWebMSupported();
-  
-    return (
-      <video className={className} autoPlay loop muted playsInline preload="auto">
-        {supportsWebM ? <source src={source.replace('.ext','.webm')} type="video/webm" /> : <source src={source.replace('.ext','.mp4')} type="video/mp4" />}
-        Not Supported
-      </video>
-    );
-  }
-
   const renderPagination = (selectedProject: Project) => {
     if (selectedProject.media.length > 1) {
       return (
@@ -105,6 +108,21 @@ function Projects() {
       );
     }
   }
+
+  const VideoGallery = ({ selectedProject, currentImageIndex } : { selectedProject: Project, currentImageIndex: number }) => {
+    return (
+        <div className={styles.projects_modal_gallery}>
+            <div className={styles.projects_modal_gallery_media_container}>
+                {selectedProject.media[currentImageIndex].type === 'image' ? (
+                    <img className={styles.projects_modal_gallery_media} src={selectedProject.media[currentImageIndex].src} alt={`Slide ${currentImageIndex + 1}`} loading="lazy"/>
+                ) : (
+                    <VideoPlayer key={selectedProject.media[currentImageIndex].src} className={styles.projects_modal_gallery_media} source={selectedProject.media[currentImageIndex].src}/>
+                )}
+                {renderPagination(selectedProject)}
+            </div>
+        </div>
+    );
+  }
   
   return (
     <div className={styles.projects}>
@@ -115,7 +133,7 @@ function Projects() {
             {project.media[0].type === 'image' ? (
               <img className={styles.projects_card_media} src={project.media[0].src} alt={`Slide ${currentImageIndex + 1}`} loading="lazy"/>
             ) : (
-              <VideoPlayer className={styles.projects_card_media} source={project.media[0].src}/>
+              <VideoPlayer key={project.media[0].src} className={styles.projects_card_media} source={project.media[0].src}/>
             )}
           </div>
         </div>
@@ -126,27 +144,20 @@ function Projects() {
           <div className={`${styles.projects_modal} ${closing ? styles.bubbleOut : ''}`} onAnimationEnd={closeProject}>
             <div className={styles.projects_modal_header}>
               <h2 className={styles.projects_modal_header_h2} >{selectedProject.title}</h2>
-              <button className={styles.projects_modal_header_button} onClick={startCloseProject}><FontAwesomeIcon icon={faXmark} className={styles.xIcon}/></button>
+              <button className={styles.projects_modal_header_button} onClick={startCloseProject}>
+                <FontAwesomeIcon icon={faXmark} className={styles.xIcon}/>
+              </button>
             </div>
             <div className={styles.projects_modal_content}>
-              <div className={styles.projects_modal_gallery}>
-                <div className={styles.projects_modal_gallery_media_container}>
-                  {selectedProject.media[currentImageIndex].type === 'image' ? (
-                    <img className={styles.projects_modal_gallery_media} src={selectedProject.media[currentImageIndex].src} alt={`Slide ${currentImageIndex + 1}`} loading="lazy"/>
-                  ) : (
-                    <VideoPlayer className={styles.projects_modal_gallery_media} source={selectedProject.media[currentImageIndex].src}/>
-                  )}
-                  {renderPagination(selectedProject)}
-                </div>
-              </div>
+              <VideoGallery selectedProject={selectedProject} currentImageIndex={currentImageIndex} />
               <div className={styles.projects_modal_content_text_container}>
                 <div className={classNames(styles.projects_modal_content_subsection, styles.top)}>
                   <h1 className={styles.projects_modal_content_h1}>Objective</h1>
-                  <p className={styles.projects_modal_content_p}>{selectedProject.description}</p>
+                  <p className={styles.projects_modal_content_p}>{selectedProject.objective}</p>
                 </div>
                 <div className={styles.projects_modal_content_subsection}>
                   <h1 className={styles.projects_modal_content_h1}>Results</h1>
-                  <p className={styles.projects_modal_content_p}>{selectedProject.description}</p>
+                  <p className={styles.projects_modal_content_p}>{selectedProject.results}</p>
                 </div>
               </div>
             </div>

@@ -6,9 +6,26 @@
       {
         "type": "video",
         "src": "Projects/Bennu/bennu1.ext"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Bennu/bennu2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Bennu/bennu3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Bennu/bennu4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Bennu/bennu5.jpg"
       }
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "objective": "The primary objective of this project was to design a satellite constellation around the asteroid Bennu with the use of MATLAB. Key priorities included establishing a robust simulation, ensuring optimal science data collection, and effectively modeling the satellite constellation.",
+    "results": "Successfully, the project achieved its set objective by utilizing advanced orbital mechanics principles to create a detailed simulation and model for a satellite constellation around Bennu. A significant achievement was the formulation of a cost function tailored for the science data, aligned with the mission's specifications. This allowed for the creation of a brute force strategy, iterating the simulation thousands of times, and fine-tuning various design parameters to obtain constellation efficiency. To enhance the efficiency, considerable optimization was integrated into both the brute force methodology and the primary simulation. Another notable endeavor was the development of a shader engine, designed to illustrate Bennu's day-night transitions over the 7-day observation span, as showcased in the project's initial animation. This visualization was crafted entirely in MATLAB, utilizing relative vector calculations paired with a foundational ray tracing technique. Cumulatively, this project fortified my proficiency in orbital mechanics and broadened my abilities in MATLAB-based simulations."
   },
   {
     "id": 2,
@@ -17,9 +34,18 @@
       {
         "type": "video",
         "src": "Projects/Chess/chess1.ext"
+      },
+      {
+        "type": "video",
+        "src": "Projects/Chess/chess2.ext"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Chess/chess3.jpg"
       }
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "objective": "The main aim of this project was to develop a chess engine in Python proficient enough to challenge and defeat me in a chess match. Additionally, I intended to integrate PyGame to make the engine interactive.",
+    "results": "Delving into the project, I quickly realized its complex nature, but I managed to surpass my initial expectations. The foundational step was to lay down the framework, programming in all of the game's rules. Initially, I toyed with various structures and faced performance challenges with the intuitive two-dimensional array approach. Eventually, I opted for a one-dimensional array of piece objects. With the rules established, I embarked on designing a basic mini-max algorithm to sift through all potential moves recursively. This mechanism also enabled me to compare the total legals moves with a well-known chess engine, assisting in debugging any discrepancies in the move logic. After the first iteration of the cost function was created, which aimed to maximize captured pieces, I delved deep into research. The result was the incorporation of several sophisticated techniques enhancing gameplay and, crucially, the search's efficiency. These encompassed alpha-beta pruning, positional heat maps, transposition tables, opening books, endgame strategies, time-constrained depth checks, and a series of other micro-optimizations. Finally, the engine not only outsmarted me but also demonstrated its abilities against a 1200-level bot on chess.com, as depicted in the gallery's initial video. This project enhanced my understanding of chess intricacies and vastly improved my Python optimization abilities, proving invaluable in later projects."
   },
   {
     "id": 3,
@@ -42,7 +68,8 @@
         "src": "Projects/Glider/glider4.jpg"
       }
     ],
-    "description": "In our 'Aerospace Vehicle Design and Performance' class, we were asked to design a glider using the aerodynamic equations we learned. While foam board was the recommended material, I pitched the idea of using my 3D printer. We started by making a MATLAB script that used our class equations to figure out the best design for the glider. I then used SOLIDWORKS to make the CAD design, and 3D printed everything except the wing. We couldn't use regular PLA because it was too heavy. So, after some trial and error, we went with a lightweight foaming PLA which worked out really well in our tests. Despite the tight deadlines, we kept tweaking our design until it was just right. Our final glider did great, especially when it came to handling unexpected gusts and staying stable."
+    "objective": "The core objective of this project was to engineer a glider with specified design constraints: a one-meter wingspan and a flat plate airfoil. Additionally, it was required to accommodate a relatively heavy 360 camera. An added complexity was my decision to predominantly 3D print the glider using foaming PLA. This project was apart of aircraft design course where I collaborated with a small group as the project lead.",
+    "results": "The project was ultimately successful, with the glider achieving a 71-meter flight distance, showcasing a statically stable trajectory. The initial triumphs was the development of a MATLAB program to process primary design constraints. This program employed aerodynamic principles from our coursework to deduce other vital design parameters. This encompassed leveraging lift curve slopes, drag polar, center of gravity stability analysis, efficiency metrics, and other aerodynamic concepts. With the parameters in hand, the next phase was CAD designing the fuselage and wings for 3D printing. Insights from the CAD's surface area evaluations further enhanced the design. My choice of foaming PLA was driven by its lightweight properties combined with commendable structural strength. The material, while promising, posed significant challenges during the implementation, necessitating several iterations before yielding a resilient, lightweight aircraft. The inital tests, conducted under suboptimal windy and cold conditions, served as a rigorous assessment of the glider's static stability. Impressively, the glider demonstrated corrective stability, adeptly responding to robust gusts by aligning with the wind, negating any unstable dives. This project improved my proficiency in adhering to the engineering design process and honed my skills in rapid prototyping."
   },
   {
     "id": 4,
@@ -51,9 +78,14 @@
       {
         "type": "video",
         "src": "Projects/Hybrid/hybrid1.ext"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Hybrid/hybrid2.jpg"
       }
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "objective": "The primary objective of this project, as part of a rocket engineering projects course, was to employ standard rocket equations in designing a comprehensive hybrid rocket engine. I took on the role of group leader, working alongside a small team to bring our vision to life.",
+    "results": "The project's success is evident from the initial video showcased in the gallery. It involved a deep dive into propulsion physics equations, employing Euler's method, accounting for 26 unknowns and 21 constants. The engine's design leveraged high-pressure liquid nitrous oxide as the oxidizer, with PLA serving as the solid fuel grain, complemented by a custom-manufactured graphite nozzle. A notable aspect was our ability to design the solid fuel grain, which was 3D printed to achieve a desired burn rate. Calculations encompassing chamber pressures, burn rate coefficients, oxidizer pressure, and other pivotal variables enabled us to derive an ideal nozzle for peak thrust. Our efforts culminated in a static fire test, aiming to compare our calculated thrust data with actual performance. Regrettably, the data collection module malfunctioned during the static fire, rendering us unable to make a direct comparison. Nevertheless, the video recording provided significant insights, particularly concerning shock diamonds and burn duration. This undertaking was a profound learning curve for me, not only in understanding rocket mechanics but also in leading a team and making informed design decisions to optimize our engine's performance."
   },
   {
     "id": 5,
@@ -68,17 +100,79 @@
         "src": "Projects/Phteven/phteven2.ext"
       }
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "objective": "For this project, I aimed to construct a 3-axis robot capable of swiftly tracking objects. A unique feature was its independence from conventional computers, achieved by integrating a Raspberry Pi. Additionally, this endeavor entailed proposing and managing a budget, as part of an engineering cohort I initiated.",
+    "results": "The robot successfully demonstrated its capacity to accurately trace objects. The first milestone involved building image tracking software, leveraging an external webcam. Utilizing OpenCV, each frame of the live video feed was processed to identify a particular color, subsequently establishing a center of mass around its most substantial concentration. This approach, however, unveiled a limitation: the system could be overwhelmed if the chosen color was excessively present. As a test, I opted for the color red due to its distinctiveness. Following the software's establishment, I started on designing a CAD body to house two stepper motors and the camera, which was then 3D printed. To ensure synchronicity between the stepper motors and the OpenCV application, two motor drivers were integrated. The control mechanism was designed such that the motors would rotate counter to the object's positioning relative to the screen's center. To account for video latency and avert overshooting, the motor's speed would decelerate as the screen's center approached the tracked object. Beyond enhancing my programming and hands-on engineering abilities, this project also imparted vital insights into budgeting and resource allocation through the proposal and management process."
   },
   {
     "id": 6,
+    "title": "GPT Based Workout App",
+    "media": [
+      {
+        "type": "video",
+        "src": "Projects/Workout/workout1.ext"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Workout/workout2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Workout/workout3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Workout/workout4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/Workout/workout5.jpg"
+      }
+    ],
+    "objective": "The primary aim of this project was to gain proficiency in developing an efficient GPT-based chatbot. Furthermore, I aimed to utilize React Native to build a comprehensive workout application that mirrors features in the leading workout apps on the market today, but with the inclusion of a GPT assistant feature.",
+    "results": "This app ranks among the most complex projects I've tackled, requiring exploration across various programming fields. During the app's inception, comprehensive information on GPT or AI chatbots was relatively scarce. One huge challenge was building a system adequate at long-term memory retention, especially when catering to a large number of users through a single backend. This obstacle was navigated by leveraging multiple docker containers in tandem with the open-source vector database, PyMilvus. This strategy enabled the storage of chat messages as dimensional vectors, allowing for efficient similarity searches during ongoing conversations. Pursuing efficiency became another big puzzle, demanding constant optimization to ensure quick and intelligent responses. Load tests demonstrated impressive robustness, managing an input of a message per second from a thousand concurrent users. Django framework served as the backbone for hosting the chatbot and the app's rest-framework. A decoupled design approach was adopted, with React Native driving the frontend. This frontend journey was also a huge undertaking, especially in design paradigms and the nuances of native app functionalities. Creating fluid animations presented another layer of complexity, given the distinctive nature of native drivers compared to conventional CSS. This project, while substantial in its achievements, is still ongoing, having been momentarily paused due to academic commitments. Nonetheless, I take immense pride in the milestones attained so far."
+  },
+  {
+    "id": 7,
+    "title": "This Website",
+    "media": [
+      {
+        "type": "image",
+        "src": "Projects/Portfolio/portfolio1.jpg"
+      }
+    ],
+    "objective": "The primary intent behind this portfolio is twofold: to showcase my engineering accomplishments and to further hone my web development and design skills using React. While web development isn't my main focus, I'm always eager to expand my expertise across diverse programming areas to become a more versatile programmer.",
+    "results": "The culmination of this project was the design, development, and deployment of this portfolio in under a week. I pride myself on my aptitude for quick learning. Prior to this, I hadn't explored very deep into website development, but my familiarity with JavaScript and TypeScript from app development, led to fast progression. This site, albeit a basic static one, taught me about effective hosting techniques and the integration of content management systems. Mobile optimization was another key takeaway. Given the use of video thumbnails for projects on this site, I aimed for quick and efficient loading while utilizing minimal bandwidth. This drove me to devise tools for media preloading and conditional file type loading based on browser compatibility. For instance, with Safari not supporting WebM, the site identifies this and opts for MP4 files instead. All in all, constructing and designing this website was a gratifying journey, and the knowledge I gained in the brief period were substantial."
+  },
+  {
+    "id": 8,
     "title": "8Bit Computer",
     "media": [
       {
         "type": "image",
         "src": "Projects/8Bit/8bit1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/8Bit/8bit2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/8Bit/8bit3.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/8Bit/8bit4.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/8Bit/8bit5.jpg"
+      },
+      {
+        "type": "image",
+        "src": "Projects/8Bit/8bit6.jpg"
       }
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "objective": "The primary aim of this project was to delve deeper into the intricacies of electrical engineering by crafting a basic 8-Bit computer, relying solely on breadboards and straightforward integrated circuits. A secondary goal was to hone skills in circuit CAD design, ensuring efficient planning for the computer's functionalities. This project drew significant inspiration from Ben Eater's 8-Bit computer design.",
+    "results": "The outcome was largely positive, culminating in a functional 8-bit computer constructed using breadboards and integrated circuits. One challenge encountered was sourcing EEPROM memory chips, which are increasingly rare in contemporary electronics. As showcased in the computer's image, manual switches were incorporated to facilitate the writing of rudimentary programs. However, in the absence of EEPROM, persistent memory storage remained elusive. The computer's architecture encompassed several modules: a clock module, memory address register, instruction register, random access memory, control logic, algorithmic logic unit, program control unit, and supplementary registers to store binary data. Ultimately, this computer was adept at executing basic arithmetic tasks and even rudimentary typing, predominantly powered by fundamental gates like AND, OR, and NAND. Despite being a complex and demanding project, requiring extensive refinement and troubleshooting, it enhanced my comprehension of computer operations and solidified my foundation in electrical engineering design processes."
   }
 ]

@@ -26,7 +26,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust this value as needed
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -39,13 +39,11 @@ const Navbar = () => {
 
   return (
     <header className={isScrolled ? styles.shrunkenNavbar : ''}>
-      {/* ... */}
       <nav ref={navRef}>
         <ul>
           <li onClick={closeNavbar}><Link to="/">About</Link></li>
           <li onClick={closeNavbar}><Link to="/projects">Projects</Link></li>
           <li onClick={closeNavbar}><Link to="/coursework">Coursework</Link></li>
-          {/* More links as needed */}
         </ul>
         <button className={`${styles['nav-btn']} ${styles['nav-close-btn']}`} onClick={showNavbar}>
           <FaTimes />
