@@ -1,26 +1,32 @@
 [
   {
     "id": 1,
-    "title": "Thermo & Heat Transfer",
-    "code": "ASEN 3113",
+    "title": "Foundations of Propulsion",
+    "code": "ASEN 4013",
     "category": "Aerospace"
   },
   {
     "id": 2,
-    "title": "Thermo & Heat Transfer",
-    "code": "ASEN 3113",
+    "title": "Senior Projects 1: Design Synthesis",
+    "code": "ASEN 4018",
     "category": "Aerospace"
   },
   {
     "id": 3,
-    "title": "Thermo & Heat Transfer",
-    "code": "ASEN 3113",
-    "category": "Aerospace"
+    "title": "Computer Systems",
+    "code": "CSCI 2400",
+    "category": "Coding"
   },
   {
     "id": 4,
-    "title": "Thermo & Heat Transfer",
-    "code": "ASEN 3113",
-    "category": "Aerospace"
+    "title": "Introduction to Robotics",
+    "code": "CSCI 3302",
+    "category": "Coding"
+  },
+  {
+    "id": 5,
+    "title": "Philosophy and the Sciences",
+    "code": "PHIL 1400",
+    "category": "Humanities"
   }
 ]

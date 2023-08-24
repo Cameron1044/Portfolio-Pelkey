@@ -11,6 +11,7 @@ import Navbar from './Components/Navigation/Navbar';
 
 import projectData from './Components/Data/projects.json';
 import { preloadMedia } from './Components/Utils/preloadImages';
+import styles from './Styles/App.module.scss';
 
 function App() {
   // Extract the thumbnail image URLs from the JSON data
@@ -32,7 +33,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div style={{marginTop: '10rem'}}>
+      <div className={styles.content}>
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/coursework" element={<Coursework />} />

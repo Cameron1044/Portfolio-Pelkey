@@ -23,6 +23,10 @@ function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const isWebMSupported = () => {
+    const video = document.createElement('video');
+    return !!video.canPlayType('video/webm; codecs="vp8, vorbis"');
+  }  
 
   useEffect(() => {
     setProjects(projectData as Project[]);
@@ -73,6 +77,17 @@ function Projects() {
     };
   }, [selectedProject, closeProject]);
 
+  function VideoPlayer({ source, className }: { source: string, className?: string }) {
+    const supportsWebM = isWebMSupported();
+  
+    return (
+      <video className={className} autoPlay loop muted playsInline preload="auto">
+        {supportsWebM ? <source src={source.replace('.ext','.webm')} type="video/webm" /> : <source src={source.replace('.ext','.mp4')} type="video/mp4" />}
+        Not Supported
+      </video>
+    );
+  }
+
   const renderPagination = (selectedProject: Project) => {
     if (selectedProject.media.length > 1) {
       return (
@@ -100,7 +115,7 @@ function Projects() {
             {project.media[0].type === 'image' ? (
               <img className={styles.projects_card_media} src={project.media[0].src} alt={`Slide ${currentImageIndex + 1}`} loading="lazy"/>
             ) : (
-              <video className={styles.projects_card_media} src={project.media[0].src} autoPlay loop muted playsInline/>
+              <VideoPlayer className={styles.projects_card_media} source={project.media[0].src}/>
             )}
           </div>
         </div>
@@ -119,7 +134,7 @@ function Projects() {
                   {selectedProject.media[currentImageIndex].type === 'image' ? (
                     <img className={styles.projects_modal_gallery_media} src={selectedProject.media[currentImageIndex].src} alt={`Slide ${currentImageIndex + 1}`} loading="lazy"/>
                   ) : (
-                    <video className={styles.projects_modal_gallery_media} src={selectedProject.media[currentImageIndex].src} autoPlay loop muted playsInline/>
+                    <VideoPlayer className={styles.projects_modal_gallery_media} source={selectedProject.media[currentImageIndex].src}/>
                   )}
                   {renderPagination(selectedProject)}
                 </div>

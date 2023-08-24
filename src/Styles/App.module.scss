@@ -1,0 +1,13 @@
+@use './styles.scss';
+
+.content {
+  margin-top: calc(styles.$webHeader + 1rem);
+  background-color: styles.$mainColor;
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-top: calc(styles.$mobileHeader + 1rem);
+  }
+}

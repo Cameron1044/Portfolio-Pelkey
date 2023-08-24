@@ -2,14 +2,13 @@
 
 /* Navbar.css */
 :root {
-  --navbar-height: 10rem;
-  --navbar-height--mobile: 8rem;
+  --navbar-height: 10rem;//styles.$mobileHeader;
+  --navbar-height--mobile: 8rem;//styles.$webHeader;
 }
 
 header {
   height: var(--navbar-height);
   transition: height 0.225s ease, padding 0.225s ease; // Add transition for padding
-  
   padding-left: 1rem; // Example padding value; adjust as needed
 
   &.shrunkenNavbar {
@@ -35,6 +34,9 @@ header {
     width: auto; 
     border-radius: 50%; 
     transition: height 0.225s ease; // Add transition for image
+  }
+  .pageName {
+    display: none;
   }
   .nav-btn {
     padding: 0.35rem;
@@ -94,10 +96,23 @@ nav {
   header {
     height: var(--navbar-height--mobile);
     transition: height 0.225s ease, padding 0.225s ease; // Add transition for padding
+    justify-content: space-between;
   
     &.shrunkenNavbar {
       --navbar-height--mobile: 6rem; 
       padding-left: 2.2rem; // Adjust the padding value for shrunken state
+    }
+
+    .pageName {
+      display: block; // This makes the element visible on mobile
+      font-size: 1.5rem; // Adjust as needed
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .nav-btn {

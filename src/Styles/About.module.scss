@@ -1,15 +1,10 @@
 @use './styles.scss';
 
-body {
-  z-index: 1;
-  background-color: styles.$tertiaryColor;
-}
-
 .content {
   position: relative;
   display: flex;
   margin: 0 10%;
-  padding: 0 10%;
+  padding: 3% 10%;
   // background-color: aqua;
   flex-direction: row-reverse;
 }

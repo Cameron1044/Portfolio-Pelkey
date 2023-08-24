@@ -1,10 +1,5 @@
 @use './styles.scss';
 
-body {
-  z-index: 1;
-  background-color: styles.$tertiaryColor;
-}
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
@@ -13,6 +8,10 @@ body {
   align-items: start;
   margin-right: 1%;
   margin-left: 1%;
+}
+
+.hidden {
+  display: none;
 }
 
 .projects_card {
@@ -158,6 +157,8 @@ body {
   border-radius: 2rem;
   width: 1.75rem; // or whatever percentage you need
   height: 1.75rem;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
   background-color: styles.$mainColor;
   display: flex;           // Make this a flex container
   align-items: center;     // Vertically align children in the center
@@ -204,6 +205,7 @@ body {
 .projects_modal_gallery {
   width: 50%;
   padding-top: 2%;
+  padding-bottom: 2%;
   // background-color: aquamarine;
   position: relative;
   flex-direction: column;

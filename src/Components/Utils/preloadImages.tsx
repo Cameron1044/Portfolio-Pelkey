@@ -1,17 +1,18 @@
-// function preloadImages(urls: string[]) {
-//   urls.forEach((url: string) => {
-//     const img = new Image();
-//     img.src = url;
-//   });
-// }
-
-// export { preloadImages };
+const getSupportedVideoExtension = () => {
+  const video = document.createElement('video');
+  return video.canPlayType('video/webm; codecs="vp8, vorbis"') ? '.webm' : '.mp4';
+}
 
 const preloadMedia = (urls: string[]) => {
-  let failedUrls: string[] = [];
+  const supportedVideoExtension = getSupportedVideoExtension();
 
   const promises = urls.map((url: string) => {
-    if (url.endsWith('.mp4') || url.endsWith('.webm')) {
+    // If URL ends with a placeholder '.ext', replace it with the supported video extension
+    if (url.endsWith('.ext')) {
+      url = url.replace('.ext', supportedVideoExtension);
+    }
+
+    if (((supportedVideoExtension === '.webm') && (url.endsWith('.webm'))) || ((supportedVideoExtension === '.mp4') && (url.endsWith('.mp4')))) {
       // Preload video
       return new Promise<void>((resolve, reject) => {
         const video = document.createElement('video');
@@ -19,8 +20,7 @@ const preloadMedia = (urls: string[]) => {
           resolve();
         };
         video.onerror = () => {
-          failedUrls.push(url);
-          resolve();
+          reject(new Error(`Failed to load video: ${url}`));
         };
         video.src = url;
       });
@@ -32,19 +32,14 @@ const preloadMedia = (urls: string[]) => {
           resolve();
         };
         img.onerror = () => {
-          failedUrls.push(url);
-          resolve();
+          reject(new Error(`Failed to load image: ${url}`));
         };
         img.src = url;
       });
     }
   });
 
-  return Promise.all(promises).then(() => {
-    if (failedUrls.length) {
-      throw new Error(`Failed to load the following media: ${failedUrls.join(', ')}`);
-    }
-  });
+  return Promise.all(promises);
 }
 
 export { preloadMedia };

@@ -2,11 +2,19 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../Styles/Navbar.module.scss';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 // import Logo from '../../Images/ME.png';
 
 const Navbar = () => {
   const navRef = useRef<HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const pageNameMapping: Record<string, string> = {
+    '/': 'About',
+    '/projects': 'Projects',
+    '/coursework': 'Coursework',
+  };
+  const currentPageName = pageNameMapping[location.pathname] || 'About';
 
   const showNavbar = () => {
     navRef.current?.classList.toggle(styles['responsive-nav']);
@@ -43,6 +51,9 @@ const Navbar = () => {
           <FaTimes />
         </button>
       </nav>
+      <div className={styles.pageName}>
+        {currentPageName}
+      </div>
       <button className={styles['nav-btn']} onClick={showNavbar}>
         <FaBars />
       </button>

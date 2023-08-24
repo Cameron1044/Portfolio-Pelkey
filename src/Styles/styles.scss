@@ -25,6 +25,13 @@ $navTextColor: #dcdcdc;
 $iconColor: #0F172A;
 $iconColorBackground: #5767aa;
 
+$mobileHeader: 8rem;
+$webHeader: 10rem;
+
+body {
+  background-color: $mainColor; /* Replace #YOUR_COLOR with your desired color */
+}
+
 
 * {
   padding: 0;
