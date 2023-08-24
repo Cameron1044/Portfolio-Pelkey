@@ -8,6 +8,7 @@ import About from './Components/Pages/About';
 import Projects from './Components/Pages/Projects';
 import Coursework from './Components/Pages/Coursework';
 import Navbar from './Components/Navigation/Navbar';
+import Contact from './Components/Pages/Contact';
 
 import projectData from './Components/Data/projects.json';
 import { preloadMedia } from './Components/Utils/preloadImages';
@@ -36,8 +37,9 @@ function App() {
       <div className={styles.content}>
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/coursework" element={<Coursework />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/coursework" element={<Coursework />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

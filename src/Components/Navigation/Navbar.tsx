@@ -44,6 +44,7 @@ const Navbar = () => {
           <li onClick={closeNavbar}><Link to="/">About</Link></li>
           <li onClick={closeNavbar}><Link to="/projects">Projects</Link></li>
           <li onClick={closeNavbar}><Link to="/coursework">Coursework</Link></li>
+          <li onClick={closeNavbar}><Link to="/contact">Contact</Link></li>
         </ul>
         <button className={`${styles['nav-btn']} ${styles['nav-close-btn']}`} onClick={showNavbar}>
           <FaTimes />

@@ -30,6 +30,15 @@
   display: flex;
   font-weight: 400;
   font-size: 2rem;
+  opacity: 0.85;
+}
+
+.content_h4 {
+  color: styles.$textColor;
+  display: flex;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 
 .content_h3 {
@@ -43,7 +52,13 @@
 .content_text_container {
   display: flex;
   flex-direction: column;
+}
+
+.content_button_container {
+  display: flex;
+  flex-direction: row;
   // background-color: red;
+  gap: 1rem;
   Link {
     text-decoration: none;
   }
@@ -92,6 +107,9 @@
   background: transparent; // Remove default gray background on some browsers
   line-height: normal;  // Normalize line height
   text-align: center;   // Center the text/content
+
+  font-weight: 200;
+  font-size: 1rem;
             
   // Remove the default appearance on Webkit browsers
   -webkit-appearance: none;
@@ -141,6 +159,10 @@
   .content_h2 {
     font-size: 1.5rem;
   }
+
+  .content_h4 {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,6 +194,10 @@
     color: styles.$secondaryColor;
     display: flex;
     font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .content_h4 {
     font-size: 1rem;
   }
   
