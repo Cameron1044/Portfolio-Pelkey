@@ -21,9 +21,6 @@ function About() {
           <Link className={styles.content_link} to="/projects">
             <button className={styles.content_button}>Check out my projects!</button>
           </Link>
-          <a href="https://www.overleaf.com/download/project/649b2f1f5b3627c18b6dd89a/build/18a29448bfb-67c1251472a8b627/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-b-f-q8zz&enable_pdf_caching=true&popupDownload=true" download className={styles.content_button}>
-            Download Resume
-          </a>
         </div>
       </div>
     </div>
